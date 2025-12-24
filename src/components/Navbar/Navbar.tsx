@@ -5,7 +5,6 @@ import { useLanguage } from "../language/LanguageContext";
 import { ThemeToggle } from "../background/ThemeToggle";
 import SwitchLanguage from "../language/SwitchLanguageButton";
 
-
 const Navbar = () => {
     const { t, lang, setLang } = useLanguage();
     const [isScrolled, setIsScrolled] = useState(false);
@@ -50,7 +49,6 @@ const Navbar = () => {
                     </span>
                 </a>
 
-                {/* Desktop nav */}
                 <div className="hidden md:flex space-x-8 items-center">
                     {navItems.map((item, key) => (
                         <a
@@ -65,7 +63,6 @@ const Navbar = () => {
                 
                 </div>
 
-                {/* Mobile button */}
                 <button
                     onClick={() => setIsMenuOpen((prev) => !prev)}
                     className="md:hidden p-2 text-foreground z-50"
@@ -74,7 +71,6 @@ const Navbar = () => {
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
 
-                {/* Mobile menu */}
                 <div
                     className={cn(
                         "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
@@ -96,7 +92,6 @@ const Navbar = () => {
                             </a>
                         ))}
 
-                        {/* زبان در موبایل */}
                         <button
                             onClick={() => setLang(lang === "en" ? "de" : "en")}
                             className="text-primary underline mt-6"
