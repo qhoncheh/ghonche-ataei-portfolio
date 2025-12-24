@@ -9,7 +9,6 @@ const Navbar = () => {
     const { t, lang, setLang } = useLanguage();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(true);
-
     const navItems = [
         { name: t("home"), href: "#hero" },
         { name: t("about"), href: "#about" },
