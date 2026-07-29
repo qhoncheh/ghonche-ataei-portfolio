@@ -1,23 +1,16 @@
-import {  useState } from 'react';
+import { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { skills } from './skillarray';
 import { useLanguage } from '../language/LanguageContext';
 
-const categories = ['All', 'Frontend', 'Backend' , 'Tools'];
+const categories = ['Frontend', 'Backend', 'Tools'];
 
 export default function Skills() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('frontend');
   const { t } = useLanguage();
-  // const [isMounted, setIsMounted] = useState(false);
 
-  // useEffect(() => {
-  //   setIsMounted(true);
-  // }, []);
-
-  const filteredSkills = skills.filter((skill) =>
-    activeCategory === 'all'
-      ? true
-      : skill.category.toLowerCase() === activeCategory
+  const filteredSkills = skills.filter(
+    (skill) => skill.category.toLowerCase() === activeCategory
   );
 
   return (
@@ -25,17 +18,19 @@ export default function Skills() {
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           {t('mySkills').split(' ')[0]}{' '}
-          <span className="text-primary">{t('mySkills').split(' ')[1]}</span>
+          <span className="text-primary">
+            {t('mySkills').split(' ')[1]}
+          </span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => setActiveCategory(category.toLowerCase())}
               className={cn(
                 'px-5 py-2 rounded-full font-semibold transition-all duration-300 capitalize cursor-pointer',
-                activeCategory === category
+                activeCategory === category.toLowerCase()
                   ? 'bg-primary text-primary-foreground shadow-md'
                   : 'bg-secondary/70 text-foreground hover:bg-secondary/90'
               )}
@@ -45,14 +40,16 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {filteredSkills.map((skill, index) => (
             <div
               key={`${skill.name}-${index}`}
               className="bg-card p-6 rounded-lg shadow-sm border border-border/50 transition-all duration-300 hover:shadow-md hover:-translate-y-1"
             >
               <div className="mb-4">
-                <h3 className="font-semibold text-lg text-foreground">{skill.name}</h3>
+                <h3 className="font-semibold text-lg text-foreground">
+                  {skill.name}
+                </h3>
               </div>
 
               <div className="space-y-2">
@@ -65,9 +62,10 @@ export default function Skills() {
                     }}
                   /> */}
                 </div>
+
                 <div className="flex justify-end">
                   {/* <span className="text-sm font-medium text-muted-foreground">
-                    {skill.level}
+                    {skill.level}%
                   </span> */}
                 </div>
               </div>
