@@ -43,5 +43,5 @@ export const skills = [
   { name: "PostgreSQL", category: "Backend" },
   { name: "REST API", category: "Backend" },
   { name: "JWT", category: "Backend" },
-  { name: "OAuth", category: "Backend" },
+  // { name: "OAuth", category: "Backend" },
 ];
