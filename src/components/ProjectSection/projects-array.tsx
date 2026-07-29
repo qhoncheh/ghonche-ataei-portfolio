@@ -36,4 +36,22 @@ export const projects = [
         demoUrl: "https://pizza-landing-react-z585.vercel.app/",
         githubUrl: "https://github.com/qhoncheh/-pizza-landing-react-"
     },
+    {
+        id: 5,
+        title: "3D Book",
+        description: " A visually engaging 3D book application built with React, showcasing interactive 3D models and animations. The project emphasizes performance optimization, responsive design, and an immersive user experience.",
+        image: "/projects/3d-book.png",
+        tags: ["React", "Tailwind CSS", "TypeScript"],
+        demoUrl: "https://3d-book-ghonche-ataei.vercel.app/",
+        githubUrl: "https://github.com/qhoncheh/3D-book-"
+    },
+    {
+        id: 6,
+        title: "Apple-3DwebApp",
+        description: " A visually engaging 3D web application built with React, showcasing interactive 3D models and animations. The project emphasizes performance optimization, responsive design, and an immersive user experience.",
+        tags: ["React", "Tailwind CSS", "TypeScript"],
+        image: "/projects/apple.jpg",
+        demoUrl: "https://apple-3-web-app.vercel.app/",
+        githubUrl: "https://github.com/qhoncheh/Apple-3DwebApp"
+    }
 ]
