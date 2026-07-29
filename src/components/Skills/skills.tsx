@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import { cn } from '../../lib/utils';
 import { skills } from './skillarray';
 import { useLanguage } from '../language/LanguageContext';
 
-const categories = ['all', 'frontend', 'tools'];
+const categories = ['All', 'Frontend', 'Backend' , 'Tools'];
 
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState('all');
   const { t } = useLanguage();
-  const [isMounted, setIsMounted] = useState(false);
+  // const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsMounted(true);
+  // }, []);
 
   const filteredSkills = skills.filter((skill) =>
     activeCategory === 'all'
@@ -57,18 +57,18 @@ export default function Skills() {
 
               <div className="space-y-2">
                 <div className="relative w-full h-2 bg-secondary/50 rounded-full overflow-hidden">
-                  <div
+                  {/* <div
                     className="absolute inset-y-0 left-0 h-full bg-primary rounded-full transition-all duration-1000 ease-out"
                     style={{
                       width: isMounted ? `${skill.level}%` : '0%',
                       transitionDelay: `${index * 50}ms`,
                     }}
-                  />
+                  /> */}
                 </div>
                 <div className="flex justify-end">
-                  <span className="text-sm font-medium text-muted-foreground">
-                    {skill.level}%
-                  </span>
+                  {/* <span className="text-sm font-medium text-muted-foreground">
+                    {skill.level}
+                  </span> */}
                 </div>
               </div>
             </div>

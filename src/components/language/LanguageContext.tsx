@@ -10,7 +10,7 @@ const translations: Record<Language, Translations> = {
   en: {
     hello: "Hello, I am",
     name: "Ghoncheh Ataei",
-    bio: "I create stellar web experiences with modern technologies. Specializing in front-end development, I build responsive and user-friendly websites and applications.",
+    bio: "I create stellar web experiences with modern technologies. Specializing in fullstack development, I build responsive and user-friendly websites and applications.",
 
     home: "Home",
     about: "About",

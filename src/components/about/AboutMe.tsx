@@ -29,13 +29,13 @@ const AboutMe = () => {
                 {t("getInTouch")}
               </a>
 
-              <a
+              {/* <a
                 href="/cv/GhonchehAtaei-Front-end.pdf"
                 download="GhonchehAtaei-Front-end.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 {t("downloadCV")}
-              </a>
+              </a> */}
             </div>
           </div>
 
